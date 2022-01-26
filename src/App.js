@@ -71,7 +71,7 @@ function App() {
                 </li>
                 <li>
                   <img
-                    src={`http://localhost:8000/files/${product.image}`}
+                    src={`https://curd-imagem-api.herokuapp.com/files/${product.image}`}
                     width="150"
                     alt="imagem"
                     style={{ marginBottom: '13px' }}

@@ -84,7 +84,11 @@ function Update() {
           className="botao-imagem"
           onChange={(e) => setImage(e.target.files[0])}
         />
-        <img src={`http://localhost:8000/files/${product.image}`} width="150" alt="imagem" />
+        <img
+          src={`https://curd-imagem-api.herokuapp.com/files/${product.image}`}
+          width="150"
+          alt="imagem"
+        />
         <br />
         <br />
         <button type="submit">Editar</button>
