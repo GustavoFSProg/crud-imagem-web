@@ -30,19 +30,59 @@ function App() {
 
   return (
     <div className="App">
-      <Link to="/register">Cadastro</Link>
       {product.map((product) => {
         return (
-          <ul key={product.key}>
-            <li>Titulo{product.title}</li>
-            <li>Preço{product.price}</li>
-            <li>
-              <img src={`http://localhost:8000/files/${product.image}`} width="150" alt="imagem" />
-              <br />
-              <button onClick={() => handleEditar(product._id)}>Editar</button>
-              <button onClick={() => handleDeletar(product._id)}>Apagar</button>
-            </li>
-          </ul>
+          <div
+            style={{
+              background: 'lightgray',
+              borderRadius: '20px',
+              marginLeft: '20px',
+              marginRight: '10px',
+              marginTop: '50px',
+              display: 'flex',
+              height: '320px',
+              alignItems: 'self-start',
+              flexDirection: 'column',
+              maxWidth: '600px',
+            }}
+          >
+            <div
+              style={{
+                marginLeft: '40px',
+                marginTop: '25px',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+            >
+              <Link to="/register">Cadastro</Link>
+
+              <ul style={{ listStyle: 'none' }} key={product.key}>
+                <li style={{ marginBottom: '13px' }}>
+                  {' '}
+                  <strong>Titulo: </strong> {product.title}
+                </li>
+
+                <li style={{ marginBottom: '13px' }}>
+                  {' '}
+                  <strong>Preço: </strong>
+                  {product.price}
+                </li>
+                <li>
+                  <img
+                    src={`http://localhost:8000/files/${product.image}`}
+                    width="150"
+                    alt="imagem"
+                    style={{ marginBottom: '13px' }}
+                  />
+                  <br />
+                  <button onClick={() => handleEditar(product._id)}>Editar</button>
+                  <button onClick={() => handleDeletar(product._id)}>Apagar</button>
+                </li>
+              </ul>
+            </div>
+          </div>
         )
       })}
     </div>
