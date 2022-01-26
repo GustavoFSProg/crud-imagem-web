@@ -1,5 +1,5 @@
 import api from '../services/api'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 
 function Deletar() {
@@ -24,7 +24,7 @@ function Deletar() {
 
   useEffect(() => {
     handleDelete()
-  }, [])
+  }, [handleDelete])
 
   return (
     <div className="App">
