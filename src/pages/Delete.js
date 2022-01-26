@@ -22,9 +22,7 @@ function Deletar() {
     }
   }
 
-  useEffect(() => {
-    handleDelete()
-  }, [true])
+  handleDelete()
 
   return (
     <div className="App">

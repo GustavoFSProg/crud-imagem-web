@@ -19,7 +19,7 @@ function Update() {
     setProducts(data)
   }
 
-  useEffect(() => {}, [handleProduct()])
+  handleProduct()
 
   async function handleSubmit(event) {
     event.preventDefault()
