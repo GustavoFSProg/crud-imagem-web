@@ -1,5 +1,5 @@
 import api from '../services/api'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 
 function Update() {
